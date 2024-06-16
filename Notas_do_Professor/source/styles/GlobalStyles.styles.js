@@ -23,5 +23,9 @@ export const GlobalStyles = StyleSheet.create({
         fontSize: '3vh',
         color: '#000000',
     },
+    h3:{
+        fontSize: '2vh',
+        color: '#000000',
+    },
 });
 
