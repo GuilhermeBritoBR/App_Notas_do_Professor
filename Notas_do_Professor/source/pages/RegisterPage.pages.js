@@ -1,6 +1,6 @@
 import React from 'react';
 //tags
-import {View, Text } from 'react-native';
+import {View} from 'react-native';
 //css
 import { GlobalStyles } from '../styles/GlobalStyles.styles';
 import HeaderComponent from '../components/GlobalComponents/Header.component';

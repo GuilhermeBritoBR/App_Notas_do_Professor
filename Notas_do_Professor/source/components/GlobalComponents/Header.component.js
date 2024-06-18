@@ -1,6 +1,6 @@
 import React from 'react';
 //tags
-import {View, Text, Image, StyleSheet } from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 //css
 import { GlobalStyles } from '../../styles/GlobalStyles.styles';
 
@@ -12,7 +12,13 @@ return(
         {/* A propiedade seEstiverDeslogadoPorNone é para ocultar a config e user para o usuário deslogado, autoexplicativa */}
         <View style={[PositonIcons.Postion,{justifyContent:'flex-start', marginLeft: '2%' }]}>
             {/* saudação é a primeira propiedade que vai dizer "Prazer Professor(a) {nome}!" */}
+            <TouchableOpacity style={PrimaryIcon.Book}>
+            <Image
+            source={require('../../assets/header/sanduiche.png')}
+            style={PrimaryIcon.Book}/>
+            </TouchableOpacity>
             <Text style={GlobalStyles.h1}>{saudaçao}</Text>
+            
         </View>
         
         <View style={[PositonIcons.Postion,{justifyContent:'center', }]}>

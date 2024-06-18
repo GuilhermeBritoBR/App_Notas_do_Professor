@@ -18,7 +18,7 @@ export default function FormComponent({EntrarOuCadastrar, TextoEsqueciSenhaOuJaT
                 </View>
                 {/* Resto do formulário */}
                 <InputComponent Placeholder={"Digite seu Nome.."} ApareceTexto_TrueOuFalse={false} />
-                <InputComponent Placeholder={"Digite sua senha.."} ApareceTexto_TrueOuFalse={true}/>
+                <InputComponent Placeholder={"Digite sua Senha.."} ApareceTexto_TrueOuFalse={true}/>
                 <MainButtonComponent Title={EntrarOuCadastrar} />
                 <Text style={GlobalStyles.h3}>{TextoEsqueciSenhaOuJaTenhoConta}</Text>
         </View>
@@ -32,6 +32,9 @@ const FormStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: '15px',
+        shadowColor: '#000000',
+        shadowOffset: {width: 1, height: 1},
+        shadowRadius: 5,
     },
     WhiteBlockImage:{
         backgroundColor: '#ffffff',

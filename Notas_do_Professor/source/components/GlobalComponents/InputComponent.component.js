@@ -18,6 +18,9 @@ const InputStyles = StyleSheet.create({
         fontSize: '2.4vh',
         color: '#000000',
         marginBottom: '3%',
-        textAlign: 'center',
+        textAlign: 'center',   
+        shadowColor: '#000000',
+        shadowOffset: {width: 1, height: 1},
+        shadowRadius: 5,
     },
 })
