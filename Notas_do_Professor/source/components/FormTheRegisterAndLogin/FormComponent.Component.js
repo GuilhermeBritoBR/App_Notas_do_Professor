@@ -5,7 +5,7 @@ import MainButtonComponent from "../GlobalComponents/MainButtonComponent.compone
 //css global
 import { GlobalStyles } from "../../styles/GlobalStyles.styles";
 
-export default function FormComponent({EntrarOuCadastrar, TextoEsqueciSenhaOuJaTenhoConta}){
+export default function FormComponent({EntrarOuCadastrar, TextoEsqueciSenhaOuJaTenhoConta, FunçaoCompletaAquiMainButtonXFormXRegisterPage}){
     return(
         <View style={FormStyles.MainFormView}>
             {/* A primeira VIEW segura todos dentro do form */}
@@ -19,7 +19,7 @@ export default function FormComponent({EntrarOuCadastrar, TextoEsqueciSenhaOuJaT
                 {/* Resto do formulário */}
                 <InputComponent Placeholder={"Digite seu Nome.."} ApareceTexto_TrueOuFalse={false} />
                 <InputComponent Placeholder={"Digite sua Senha.."} ApareceTexto_TrueOuFalse={true}/>
-                <MainButtonComponent Title={EntrarOuCadastrar} />
+                <MainButtonComponent FunçaoCompletaAquiMainButtonXFormXRegisterPage={FunçaoCompletaAquiMainButtonXFormXRegisterPage} Title={EntrarOuCadastrar} />
                 <Text style={GlobalStyles.h3}>{TextoEsqueciSenhaOuJaTenhoConta}</Text>
         </View>
     );

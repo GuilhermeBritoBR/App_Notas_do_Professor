@@ -2,9 +2,9 @@ import { Text, StyleSheet, TouchableOpacity } from "react-native";
 //css global
 import { GlobalStyles } from "../../styles/GlobalStyles.styles";
 
-export default function MainButtonComponent({Title}){
+export default function MainButtonComponent({Title,FunçaoCompletaAquiMainButtonXFormXRegisterPage}){
     return(
-        <TouchableOpacity style={ButtonStyles.Button}>
+        <TouchableOpacity style={ButtonStyles.Button} onPress={FunçaoCompletaAquiMainButtonXFormXRegisterPage}>
             <Text style={[GlobalStyles.h2,{color: '#ffffff'}]}>{Title}</Text>
         </TouchableOpacity>
     )
