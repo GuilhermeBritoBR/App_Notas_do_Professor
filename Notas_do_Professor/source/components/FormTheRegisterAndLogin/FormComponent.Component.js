@@ -4,8 +4,14 @@ import InputComponent from "../GlobalComponents/InputComponent.component";
 import MainButtonComponent from "../GlobalComponents/MainButtonComponent.component";
 //css global
 import { GlobalStyles } from "../../styles/GlobalStyles.styles";
+import { useEffect } from "react";
 
-export default function FormComponent({EntrarOuCadastrar, TextoEsqueciSenhaOuJaTenhoConta, FunçaoCompletaAquiMainButtonXFormXRegisterPage}){
+export default function FormComponent({
+    EntrarOuCadastrar,
+    TextoEsqueciSenhaOuJaTenhoConta,
+    FunçaoCompletaAquiMainButtonXFormXRegisterPage,
+    children
+}){
     return(
         <View style={FormStyles.MainFormView}>
             {/* A primeira VIEW segura todos dentro do form */}
@@ -17,9 +23,10 @@ export default function FormComponent({EntrarOuCadastrar, TextoEsqueciSenhaOuJaT
                     />
                 </View>
                 {/* Resto do formulário */}
-                <InputComponent Placeholder={"Digite seu Nome.."} ApareceTexto_TrueOuFalse={false} />
-                <InputComponent Placeholder={"Digite sua Senha.."} ApareceTexto_TrueOuFalse={true}/>
-                <MainButtonComponent FunçaoCompletaAquiMainButtonXFormXRegisterPage={FunçaoCompletaAquiMainButtonXFormXRegisterPage} Title={EntrarOuCadastrar} />
+                {/*aqui o conteudo do form*/}
+                {children}
+
+                <MainButtonComponent FunçaoCompletaAquiMainButton={FunçaoCompletaAquiMainButtonXFormXRegisterPage} Title={EntrarOuCadastrar} />
                 <Text style={GlobalStyles.h3}>{TextoEsqueciSenhaOuJaTenhoConta}</Text>
         </View>
     );

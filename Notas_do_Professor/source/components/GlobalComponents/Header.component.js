@@ -7,10 +7,25 @@ import { useState } from 'react';
 import { GlobalStyles } from '../../styles/GlobalStyles.styles';
 //components
 import ModalForNavigation from '../HeaderComponents/ModalForNavigation.component';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+//hook
+import { useEffect } from 'react';
 //scripts
 
-export default function HeaderComponent({saudaçao, seEstiverDeslogadoPorNone, propiedadeParaAbrirModal}) {
-  
+export default function HeaderComponent({ seEstiverDeslogadoPorNone, propiedadeParaAbrirModal}) {
+    //monitorar nome
+    useEffect(()=>{
+        LoadName();
+    },[])
+    //state do nome do usuario
+    const [name, setName] = useState("")
+        const LoadName = async () =>{
+            try{
+            setName(await AsyncStorage.getItem('@name'));
+            }catch(err){
+            setName("Professor(a)");
+            }
+        }
 return( 
     <View style={GlobalStyles.header}>
         {/* Header com algumas propiedades de saudação, configuração e perfil */}
@@ -25,7 +40,7 @@ return(
             source={require('../../assets/header/sanduiche.png')}
             style={PrimaryIcon.Book}/>
             </TouchableOpacity>
-            <Text style={GlobalStyles.h1}>{saudaçao}</Text>
+            <Text style={[GlobalStyles.h1,{display: seEstiverDeslogadoPorNone}]}>{`Prazer, ${name}!`}</Text>
         </View>
         
         <View style={[PositonIcons.Postion,{justifyContent:'center', }]}>

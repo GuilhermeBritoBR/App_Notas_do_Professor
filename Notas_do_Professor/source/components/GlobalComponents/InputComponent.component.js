@@ -1,8 +1,10 @@
 import { StyleSheet, TextInput } from "react-native";
 
-export default function InputComponent({Placeholder, ApareceTexto_TrueOuFalse}){
+export default function InputComponent({Placeholder, ApareceTexto_TrueOuFalse,SetarValorDeUseStates_INPUTXFORM,ValorDoInput_INPUTXFORM,}){
     return(
         <TextInput
+        onChangeText={SetarValorDeUseStates_INPUTXFORM}
+        value={ValorDoInput_INPUTXFORM}
         placeholder={Placeholder}
         style={InputStyles.Input}
         secureTextEntry={ApareceTexto_TrueOuFalse}

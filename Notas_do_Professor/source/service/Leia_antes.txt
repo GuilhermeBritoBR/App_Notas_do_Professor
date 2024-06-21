@@ -1,0 +1,5 @@
+Os módulos necessários são o Express, Express-Session, BodyParser e Mysql.
+
+Execute este comando antes
+
+npm install express express-session body-parser mysql cors jsonwebtoken

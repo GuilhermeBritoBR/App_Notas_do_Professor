@@ -12,13 +12,12 @@ import ModalForNavigation from "../components/HeaderComponents/ModalForNavigatio
 
 export default function HomePage(){
     //constante do nome do usuario
-    const nomeDoUsuario = "Guilherme";
     //constante para abrir modal
     const [ModalVisible, setModalVisible] = useState(false);
     return(
     <View style={GlobalStyles.container}>
         <HeaderComponent 
-        saudaçao={`Prazer, ${nomeDoUsuario}!`} seEstiverDeslogadoPorNone={""} 
+         seEstiverDeslogadoPorNone={""} 
         propiedadeParaAbrirModal={() =>setModalVisible(true)}
         />
         <View style={[GlobalStyles.content]}>
