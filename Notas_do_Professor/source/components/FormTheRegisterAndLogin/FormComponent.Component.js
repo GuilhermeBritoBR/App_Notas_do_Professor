@@ -10,7 +10,8 @@ export default function FormComponent({
     EntrarOuCadastrar,
     TextoEsqueciSenhaOuJaTenhoConta,
     FunçaoCompletaAquiMainButtonXFormXRegisterPage,
-    children
+    children,
+    ParaOndeOtextoDeveLevarEsqueciSenhaOuLogin
 }){
     return(
         <View style={FormStyles.MainFormView}>
@@ -27,7 +28,7 @@ export default function FormComponent({
                 {children}
 
                 <MainButtonComponent FunçaoCompletaAquiMainButton={FunçaoCompletaAquiMainButtonXFormXRegisterPage} Title={EntrarOuCadastrar} />
-                <Text style={GlobalStyles.h3}>{TextoEsqueciSenhaOuJaTenhoConta}</Text>
+                <Text style={[GlobalStyles.h3,{textDecorationLine: 'underline'}]} onPress={ParaOndeOtextoDeveLevarEsqueciSenhaOuLogin}>{TextoEsqueciSenhaOuJaTenhoConta}</Text>
         </View>
     );
 }

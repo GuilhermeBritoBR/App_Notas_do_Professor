@@ -82,11 +82,13 @@ return(
         <View style={{flex: 8, justifyContent: 'center', alignItems: 'center'}}>
             <FormComponent 
             TextoEsqueciSenhaOuJaTenhoConta={"Já tem conta, entre aqui!"} EntrarOuCadastrar={"Cadastrar"}
-            FunçaoCompletaAquiMainButtonXFormXRegisterPage={()=>FilterData()}>
+            FunçaoCompletaAquiMainButtonXFormXRegisterPage={()=>FilterData()}
+            ParaOndeOtextoDeveLevarEsqueciSenhaOuLogin={()=> Navigation.navigate('LoginPage')}
+            >
                 <InputComponent 
                 ValorDoInput_INPUTXFORM={name}
                 SetarValorDeUseStates_INPUTXFORM={(text)=>handleSetName(text)}
-                Placeholder={"Digite seu Nome.."} ApareceTexto_TrueOuFalse={false} />
+                Placeholder={"Seu primeiro Nome.."} ApareceTexto_TrueOuFalse={false} />
 
                 <InputComponent 
                 ValorDoInput_INPUTXFORM={email}

@@ -29,6 +29,7 @@ const ConfigStylesModal = StyleSheet.create({
         flex: 4,
         backgroundColor: '#000000',
         opacity: 0.2,
+        cursor:'auto',
     },
     ModalConfiguration:{
 
