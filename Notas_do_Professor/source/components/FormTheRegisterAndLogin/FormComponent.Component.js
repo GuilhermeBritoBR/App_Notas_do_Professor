@@ -39,7 +39,7 @@ const FormStyles = StyleSheet.create({
         backgroundColor: '#D9D9D9',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: '15px',
+        borderRadius: 15,
         shadowColor: '#000000',
         shadowOffset: {width: 1, height: 1},
         shadowRadius: 5,
@@ -57,3 +57,4 @@ const FormStyles = StyleSheet.create({
         width: '5.6vh',
     },
 })
+export {FormStyles};

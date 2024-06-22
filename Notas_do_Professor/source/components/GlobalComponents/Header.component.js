@@ -10,6 +10,7 @@ import ModalForNavigation from '../HeaderComponents/ModalForNavigation.component
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //hook
 import { useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 //scripts
 
 export default function HeaderComponent({ seEstiverDeslogadoPorNone, propiedadeParaAbrirModal}) {
@@ -26,6 +27,8 @@ export default function HeaderComponent({ seEstiverDeslogadoPorNone, propiedadeP
             setName("Professor(a)");
             }
         }
+        //navegação
+        const navigate = useNavigation();
 return( 
     <View style={GlobalStyles.header}>
         {/* Header com algumas propiedades de saudação, configuração e perfil */}
@@ -52,19 +55,19 @@ return(
             style={PrimaryIcon.Book}
             />
         </View>
-        <View style={[PositonIcons.Postion,{justifyContent:'flex-end', marginRight: '3%', }]}>
+
+        <TouchableOpacity 
+        onPress={()=> navigate.navigate("UserPage") }
+        style={[PositonIcons.Postion,{justifyContent:'flex-end', marginRight: '3%', }]}>
             {/* Icone de configuração */}
             <Image
             source={require('../../assets/header/ConfigIcon.png')}
             style={[PrimaryIcon.Config,{display: seEstiverDeslogadoPorNone}]}
             />
             {/* Icone do usuario */}
-            <Image
-            source={require('../../assets/header/UserIcon.png')}
-            style={[PrimaryIcon.User,{display: seEstiverDeslogadoPorNone}]}
-            />
+           
             
-        </View>
+        </TouchableOpacity>
     </View>
 )
 }

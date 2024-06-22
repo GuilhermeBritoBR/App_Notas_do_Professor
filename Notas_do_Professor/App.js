@@ -5,6 +5,7 @@ import { Text, View } from 'react-native';
 import RegisterPage from './source/pages/RegisterPage.pages.js';
 import HomePage from './source/pages/HomePage.pages.js';
 import LoginPage from './source/pages/LoginPage.pages.js';
+import UserPage from './source/pages/UserPage.pages.js';
 //navegação na aplicação
 import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,10 +15,12 @@ import { VerifyToken } from './source/scripts/VerifyToken.script.js';
 import { useEffect, useState } from 'react';
 //async storage
 import AsyncStorage from '@react-native-async-storage/async-storage';
+
 //criar stack
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  
   const [paginaParaOUsuarioSeEstiverDeslogadoOuLogado, setPage] = useState(null);
   useEffect(()=>{
     async function LoadToken(){
@@ -54,6 +57,7 @@ export default function App() {
       <Stack.Screen name="RegisterPage" component={RegisterPage}/>
       <Stack.Screen name="HomePage" component={HomePage}/>
       <Stack.Screen name="LoginPage" component={LoginPage}/>
+      <Stack.Screen name="UserPage" component={UserPage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

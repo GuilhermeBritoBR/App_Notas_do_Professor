@@ -8,5 +8,6 @@
 <li>npx expo install @react-navigation/native</li>
 <li>npx expo install @react-navigation/native-stack</li>
 <li>npm install @react-native-async-storage/async-storage</li>
+<li>npx expo install @react-native-picker/picker</li>
 </ul>
  
